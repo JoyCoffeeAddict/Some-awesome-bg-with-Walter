@@ -52,10 +52,11 @@ function start_chromium {
 		if [ "$DEBUG" = true ]; then echo 'Refresh Chromium'; fi
 		key='ctrl+l'
 		interact_chromium
-		xdotool search --onlyvisible --class chromium type $INDEX_HTML_PATH
+		xdotool search --onlyvisible --class chromium type 'https://www.youtube.com/watch?v=BucWqUtIVEc'
 		key='Return'
 		interact_chromium
-		key='F11'
+		sleep 1
+		key='f'
 		interact_chromium
 	fi
 }
